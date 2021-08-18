@@ -19,9 +19,10 @@ body{
 
 #slider{
     width: 80%;
-    height: 12vh;
-    max-height: 220px;
-    margin: 0 auto 300px;
+    height: 50vh;
+    max-height: 850px;
+    margin:0 auto 50px;
+    position: relative;
     
 }
 
@@ -30,6 +31,14 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 800ms linear;
+}
+
+#slider img.selected{
+    opacity: 1;
+    transition: opacity 800ms linear;
 }
 
 #main{
@@ -49,10 +58,12 @@ body{
 
 .article{
     color: var(--primary-color);
-    width: 40%;
+    width: 35%;
     display: flex;
+    align-items: flex-start;
     align-self: center;
     gap: 10px;
+    min-width: 380px;
 
     
 }
@@ -61,6 +72,9 @@ body{
     padding: 30px;
     font-size: 14px;
     width: calc(100% - 35%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     
 }
 
