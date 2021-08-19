@@ -36,7 +36,7 @@ a{
 #logo{
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 
@@ -54,7 +54,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3em;
+    padding: 0px 15px;
     border-bottom: var(--complement-color2) solid 2px;
 }
 

@@ -2,28 +2,29 @@
 
 
 #slider{
-    width: 70%;
-    height: 62vh;
+    width: 75%;
+    height: 40vh;
     max-height: 850px;
     margin:0 auto 50px;
     position: relative;
+    background-image: linear-gradient(to top, var(--complement-color2), transparent), url(Imagens/JpgSlider/2.jpg);
+    background-position: center bottom;
+    background-size: cover;
     
 }
 
 #slider img{
     text-align: center;
-    height: 100%;
+    height: 90%;
     width: 100%;
     object-fit: cover;
     position: absolute;
     opacity: 0;
     transition: opacity 800ms linear;
+    
 }
 
-#slider img.selected{
-    opacity: 1;
-    transition: opacity 800ms linear;
-}
+
 
 #main{
     margin: auto;
@@ -37,17 +38,18 @@
 }
 
 #articles{
-    margin: auto 10% ;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90%;
-    gap: 30px 5px;
+    
+   
 }
 
 .article{
     color: var(--primary-color);
-    width: 20%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +64,6 @@
 .article div{
     padding: 20px;
     font-size: 14px;
-    width: calc(100% - 35%);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -85,3 +86,22 @@
     border-radius: 15px;
 }
 
+@media (min-width:750px){
+
+    #slider{
+        background-image: none;
+        height: 60vh;
+        
+    }
+
+    #slider img{
+        opacity: 0;
+        transition: opacity 800ms linear;
+    }
+
+    #slider img.selected{
+        opacity: 1;
+        transition: opacity 800ms linear;
+    }
+
+}
