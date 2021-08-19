@@ -1,25 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
 
-body{
-    font-family: sans-serif;
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    
-}
 
 #slider{
-    width: 80%;
-    height: 50vh;
+    width: 70%;
+    height: 62vh;
     max-height: 850px;
     margin:0 auto 50px;
     position: relative;
@@ -53,18 +37,19 @@ body{
 }
 
 #articles{
-    margin: auto;
+    margin: auto 10% ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     gap: 30px 5px;
 }
 
 .article{
     color: var(--primary-color);
-    width: 35%;
+    width: 20%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     align-self: center;
@@ -81,6 +66,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 0 -15px;
     
 }
 
@@ -94,6 +80,8 @@ body{
     position: relative;
     top: 20px;
     height: 100%;
-    width: 45%;
+    width: 100%;
     object-fit: cover;
+    border-radius: 15px;
 }
+

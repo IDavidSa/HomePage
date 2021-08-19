@@ -1,3 +1,4 @@
+
 let images= document.querySelectorAll('#slider img');
     time = 2500;
     currentImageIndex = 0;
@@ -28,7 +29,20 @@ function start(){
 
 }
 
-window.addEventListener('load',start())
+window.addEventListener('load',start)
 
+// botao menu
+
+let btMobile = document.getElementById('btMobile');
+
+function openMenu(){
+    var menu = document.getElementById('menu')
+    menu.classList.toggle('active')
+    btMobile.classList.toggle('active')
+}
+
+
+btMobile.addEventListener('click', openMenu)
     
+
 

@@ -2,8 +2,35 @@
     --secondary-color:#C8E0F4;
     --complement-color1:#9DD1F1;
     --primary-color:#031927;
+    --hover-color:#05293f;
     --text-emph:#BA1200;
     --complement-color2:#508AA8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+body{
+    font-family: sans-serif;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    
+}
+
+button{
+    border: none;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 #logo{
@@ -11,6 +38,7 @@
     align-items: center;
     gap: 8px;
 }
+
 
 #logo p{
     color: var(--secondary-color);
@@ -30,21 +58,90 @@
     border-bottom: var(--complement-color2) solid 2px;
 }
 
+#btMobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: var(--complement-color2);
+    border-radius: 50%;
+    position: absolute;
+    right: 3%;
+    transition: right 200ms linear;
+    
+}
+
+#btMobile.active{
+    right: 32%;
+    transition: right 200ms linear
+
+}
+
 #menu{
     display: flex;
+    text-align: left;
+    flex-direction: column; /*Mudar para row no Media Querie*/
     list-style: none;
     gap: 12px;
+    background-color: inherit;
+    position: fixed; /*Tirar o position no Media Querie*/
+    top: 0%;
+    left: calc(100% + 100px);
+    transition: left 200ms linear;
+    padding: 70px 65px 70px 15px;
+    
+    
+}
+
+#menu.active{
+    left: 70%;
+    transition: left 200ms linear;
+    z-index: 1000;
+    
+    
 }
 
 #menu li a{
+    display: block;/*Mudar para inline*/
     text-decoration: none;
     color: var(--secondary-color);
-    padding: 12px;
-    font-size: 18px;
+    padding: 40px 5px; /*Diminuir padding no media Querie*/
+    font-size: 25px;
 }
 
 #navbar img{
     height: 60px;
     width: 60px;
     object-fit: cover;
+}
+
+@media (min-width:750px){
+
+    #btMobile{
+        display: none;
+    }
+
+    #menu{
+        flex-direction: row;
+        position: static;
+        padding: 12px;
+        
+    }
+
+    #menu li a{
+        display: inline-block;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    #menu li a:hover{
+        background-color: var(--hover-color);
+        transition: background-color 500ms linear;
+    }
+    
+
+
+
 }
